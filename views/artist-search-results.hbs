@@ -1,11 +1,12 @@
 <a href="/artist-search-results">Artists found</a>
-<ul>
-    {{#each artistsList}}
-    <li>
+{{#each artistsList}}
+<div class="artist-card">
+    <div class="artist-img">
         <img src="{{images.[0].url}}"> {{!--[] are not mandatory when using hbs --}}
-        <h2>{{name}}</h2>
-        <a href="/albums/{{id}}">albums</a> {{!-- every time the #each runs, it will get what is in the {{}}  --}}
-    </li>
-    {{/each}}
+    </div>
+    <h2>{{name}}</h2>
+    <a href="/albums/{{id}}">albums</a> {{!-- every time the #each runs, it will get what is in the {{}}  --}}
+</div>
+{{/each}}
 </ul>
 {{!-- Gets info form the api and displays --}}

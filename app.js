@@ -74,13 +74,13 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 
 app.get('/tracks/:albumTracks', (req, res) => {
-let albumTracks = req.params.albumTracks;
+let artistTracks = req.params.albumTracks;
 
-spotifyApi.getAlbumTracks(albumTracks).then(
+spotifyApi.getAlbumTracks(artistTracks).then(
   (data) => {
     console.log('response from getAlbumTracks', data.body);
-
-    render('tracks', {tracks:data.body.items});
+    let ArtistAlbumTracks = data.body.items;
+    res.render('tracks', {albumTracks:ArtistAlbumTracks});
   }, 
   (err)  => {
     console.log('Something went wrong!', err);
