@@ -44,7 +44,7 @@ spotifyApi.searchArtists(artist) //changes dynamicly depending on the input
 //data is a name of our choice, just need to make sure it's the same on the rest of the code
   .then(data => {
 // to get the artist results we have to look that the API sructure----> see on the terminal with console.log
-    console.log('The received data from the API: ', data.body.artist.items); //consolo.log the recived data from the API
+    console.log('The received data from the API: '); //consolo.log the recived data from the API
     let artistsList = data.body.artists.items;
 console.log(artistsList)            // it's always an object so use {} --> use hbs to display on the web
     res.render('artist-search-results', {artistsList:artistsList}); // rendering he view
