@@ -12,6 +12,8 @@ body {
 }
 
 .form-container {
+  height: 500px;
+  width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,45 +24,29 @@ body {
   color: #ffffff;
 }
 
-.artist-img {
-  height: 150px;
-  width: 150px;
-}
-
-.album-img {
-  height: 150px;
-  width: 150px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.artist-card {
-  height: 500px;
-  width: 300px;
-  margin-right: 500px;
-  margin-left: 430px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.card {
   color: #000000;
 }
+.btn {
+  background-color: #1db954;
+  color: #ffffff;
+  border: solid 1px #1db954;
+}
 
-.album-card {
-  height: 500px;
-  width: 300px;
-  margin-right: 500px;
-  margin-left: 430px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
+.artists-cards {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-around;
-  color: #000000;
+  flex-wrap: wrap;
+  margin: 50px;
+  margin-bottom: 100px;
+}
+
+.album-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 50px;
+  margin-bottom: 100px;
 }

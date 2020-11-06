@@ -1,15 +1,16 @@
 <h1>Albums</h1>
 {{!-- get info form the API again --}}
 <a href="/albums/:artistId">Album</a>
-
-{{#each albums}}
-<div class="album-card">
-    <div class="album-img">
-        <img src="{{images.[0].url}}">
+<div class="album-cards">
+    {{#each albums}}
+    <div class="card" style="width: 18rem;">
+        <img src="{{images.[0].url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text"></p>
+            <a href="/tracks/{{id}}" class="btn btn-primary">check out the tracks</a>
+        </div>
     </div>
-
-    <h2>{{name}}</h2>
-    <a href="/tracks/{{id}}">tracks</a>
+    {{!-- now is the ID of the album and not the artist, because we are inside the albums --}}
+    {{/each}}
 </div>
-{{!-- now is the ID of the album and not the artist, because we are inside the albums --}}
-{{/each}}
