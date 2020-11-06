@@ -1,6 +1,13 @@
-<a href="/albums/:artistId">album display</a>
-{{#each result}}
-<img src="{{images.[0].url}}">
-<h2>{{name}}</h2>
-<a href="/track/{{id}}">track</a>
-{{/each}}
+<h1>Albums</h1>
+{{!-- get info form the API again --}}
+<a href="/albums/:artistId">Album</a>
+<ul>
+    {{#each albums}}
+    <li>
+        <img src="{{images.[0].url}}">
+        <h2>{{name}}</h2>
+        <a href="/tracks/{{id}}">tracks</a>
+        {{!-- now is the ID of the album and not the artist, because we are inside the albums --}}
+    </li>
+    {{/each}}
+</ul>

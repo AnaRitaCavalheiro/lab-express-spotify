@@ -1,6 +1,11 @@
-<a href="/artist-search-results">album display</a>
-{{#each result}}
-<img src="{{images.[0].url}}">
-<h2>{{name}}</h2>
-<a href="/albums/{{id}}">albums</a>
-{{/each}}
+<a href="/artist-search-results">Artists found</a>
+<ul>
+    {{#each artistsList}}
+    <li>
+        <img src="{{images.[0].url}}"> {{!--[] are not mandatory when using hbs --}}
+        <h2>{{name}}</h2>
+        <a href="/albums/{{id}}">albums</a> {{!-- every time the #each runs, it will get what is in the {{}}  --}}
+    </li>
+    {{/each}}
+</ul>
+{{!-- Gets info form the api and displays --}}
